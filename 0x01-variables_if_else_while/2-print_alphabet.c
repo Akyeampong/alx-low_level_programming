@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * main - Alphabets from a to z
  * 
@@ -14,7 +13,7 @@ int main(void)
 	for (low = 'a'; low <= 'z'; low++)
 	{
 		putchar(low);
-		putchar('\n');
 	}
+	putchar('\n');
 	return (0);
 }
