@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+
 /**
  * main - Alphabets from a to z
  * 
  * Return: Always 0 (Success)
  */
 
-int main(void)
+int main()
 {
 	char low;
 
