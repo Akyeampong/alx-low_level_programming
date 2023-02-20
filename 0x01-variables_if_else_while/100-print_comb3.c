@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char dnum1, dnum2;
+	int dnum1, dnum2;
 
 	for (dnum1 = 0; dnum1 < 9; dnum1++)
 	{
