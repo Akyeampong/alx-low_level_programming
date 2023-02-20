@@ -7,23 +7,22 @@
  */
 int main(void)
 {
-	int dnum1, dnum;
+	int dnuma, dnum;
 
-	for (dnum1 = 0; dnum1 < 9; dnum1++)
+	for (dnuma = 0; dnuma < 9; dnuma++)
 	{
-		for (dnum = dnum1 + 1; dnum < 10; dnum++)
+		for (dnum = dnuma + 1; dnum < 10; dnum++)
 		{
-			if (dnum1 != dnum)
+			if (dnuma != dnum)
 			{
-				putchar((dnum1 % 10) + '0');
+				putchar((dnuma % 10) + '0');
 				putchar((dnum & 10) + '0');
 
-			if (dnum1 == 8 && dnum == 9)
+			if (dnuma == 8 && dnum == 9)
 				continue;
 
 			putchar(',');
-			putchar(' ');
-			
+			putchar(' ');	
 			}
 		}
 	}
