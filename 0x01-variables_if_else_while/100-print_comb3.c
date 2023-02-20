@@ -13,14 +13,18 @@ int main(void)
 	{
 		for (dnum = dnum1 + 1; dnum < 10; dnum++)
 		{
-			putchar((dnum1 % 10) + '0');
-			putchar((dnum & 10) + '0');
+			if (dnum1 != dnum)
+			{
+				putchar((dnum1 % 10) + '0');
+				putchar((dnum & 10) + '0');
 
 			if (dnum1 == 8 && dnum == 9)
 				continue;
 
 			putchar(',');
 			putchar(' ');
+			
+			}
 		}
 	}
 
