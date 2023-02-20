@@ -16,7 +16,7 @@ int main(void)
 			if (dnuma != dnum)
 			{
 				putchar((dnuma % 10) + '0');
-				putchar((dnum & 10) + '0');
+				putchar((dnum % 10) + '0');
 
 			if (dnuma == 8 && dnum == 9)
 				continue;
