@@ -1,12 +1,9 @@
 #include "main.h"
-
 /** 
  * print_sign - prints the sign of a number
  * @n: character to be tested
  *
- * Return: 1 for a number > 0
- *  	   0 for a number = 0
- *  	   -1 for a number < 0
+ * Return: 1 for a number > 0, 0 for a number = 0, -1 for a number < 0
  */ 
 int print_sign(int n)
 {
