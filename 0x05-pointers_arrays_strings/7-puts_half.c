@@ -2,8 +2,8 @@
 
 /**
  * puts_half - prints half of a string
- * @str: input string 
- *
+ * @str: input string
+ * 
  * Return: None
  */
 void puts_half(char *str)
@@ -15,7 +15,7 @@ void puts_half(char *str)
 		len++;
 	if (len % 2 == 0)
 		n = len / 2;
-	else 
+	else
 		n = (len + 1) / 2;
 	for (i = n; i < len; i++)
 		_putchar(str[i]);
