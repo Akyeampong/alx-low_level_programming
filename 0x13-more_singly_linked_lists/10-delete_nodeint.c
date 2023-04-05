@@ -1,42 +1,53 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include "lists.h"
-
 /**
-  * delete_nodeint_at_index - deletes node at index 'index' of a listint_t linked list
-  * @head: head node
-  * @index: index of the node that should be deleted, index starts at 0
-  * Return: 1 if succeeded or -1 if failed
-  */
+ * delete_nodeint_at_index - delete node at index
+ * @head: head node
+ * @index: index node
+ * Return: 1 succed -1 fails
+ */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	unsigned int count = 1;
-	listint_t *new = *head, *temp;
+	listint_t *prev, *node;
 
-	if (!head || !*head)
+	if (!*head)
 		return (-1);
 
-	if (index == 0)
+	prev = get_nodeint_at_index(*head, index - 1);
+	node = get_nodeint_at_index(*head, index);
+	if (!node)
+		return (-1);
+	if (index != 0)
 	{
-		*head = new->next;
-		free(new);
-		return (1);
+		prev->next = node->next;
+		node->next = 0;
 	}
-
-	temp = *head;
-	while (temp)
+	else
 	{
-		if (count == index)
-		{
-			new = temp->next;
-			temp->next = new->next;
-			free(new);
-			return (1);
-		}
-
-		temp = temp->next;
-		count++;
+		*head = node->next;
 	}
+	free(node);
+	return (1);
+}
+/**
+ * get_nodeint_at_index - get node at index
+ * @head: head node
+ * @index: index node
+ * Return: address of index node
+ */
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+{
+	unsigned int i = 0;
 
-	return (-1);
+	if (!head)
+		return (0);
+
+	while (head)
+	{
+		if (index == i)
+			return (head);
+		i++;
+		head = head->next;
+	}
+	return (0);
 }
